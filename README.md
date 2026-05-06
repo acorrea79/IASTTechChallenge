@@ -209,7 +209,11 @@ O foco da análise exploratória foi traduzir os dados em uma leitura de negóci
 
 ---
 
-## 10. Estrutura Atual do Projeto
+## 10. Estrutura do Projeto, Instalação e Execução
+
+Esta seção consolida a estrutura do projeto com os passos necessários para executar a análise.
+
+### 10.1 Estrutura atual do projeto
 
 ```text
 IASTTechChallenge/
@@ -224,35 +228,88 @@ IASTTechChallenge/
 └── README.md
 ```
 
+### 10.2 Tecnologias utilizadas
+
+- Python;
+- Pandas;
+- NumPy;
+- Matplotlib;
+- Seaborn;
+- Jupyter Notebook;
+- Google Colab ou ambiente local com Jupyter.
+
+### 10.3 Clonar o repositório
+
+```bash
+git clone https://github.com/acorrea79/IASTTechChallenge
+```
+
+### 10.4 Acessar a pasta do projeto
+
+```bash
+cd IASTTechChallenge
+```
+
+### 10.5 Instalar as dependências
+
+Caso utilize ambiente local, instale as principais bibliotecas:
+
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
+
+### 10.6 Executar os notebooks
+
+Execute os notebooks nesta ordem:
+
+```text
+1. notebooks/TratamentoDados.ipynb
+2. notebooks/EDA.ipynb
+```
+
+O primeiro notebook realiza o tratamento da base e gera o arquivo tratado.
+
+O segundo notebook realiza a análise exploratória e apresenta os principais gráficos e conclusões do projeto.
+
 ---
 
-## 11. Principais Insights da Análise
+## 11. Apresentação Padronizada dos Resultados
 
-### 11.1 A satisfação está mais ligada à experiência do que ao preço
+Para facilitar a leitura do resultado, os achados foram organizados no padrão:
+
+> **Dimensão analisada → Principal conclusão → Impacto para o negócio → Ação recomendada**
+
+| Dimensão analisada | Principal conclusão | Impacto para o negócio | Ação recomendada |
+|---|---|---|---|
+| Logística, problemas e NPS | Atrasos na entrega estão ligados à queda do NPS | O cliente percebe quebra de promessa quando o pedido atrasa | Monitorar pedidos com risco de atraso e agir preventivamente |
+| Atendimento, resolução e satisfação | Mais contatos com atendimento estão ligados a mais reclamações | O cliente precisa se esforçar mais para resolver problemas | Melhorar a resolução no primeiro contato |
+| Logística e atendimento | Reclamações aumentam quando há falhas na jornada | Problemas operacionais sobrecarregam o suporte | Reduzir falhas de entrega e melhorar comunicação ativa |
+| Preço e experiência | Valor do pedido, desconto e frete têm baixa influência direta no NPS | A satisfação depende mais da experiência do que do preço | Priorizar qualidade da jornada, não apenas promoções |
+| Satisfação e recompra | Clientes mais satisfeitos tendem a comprar novamente | Melhor experiência aumenta fidelização e recorrência | Usar NPS como indicador estratégico de retenção |
+
+---
+
+## 12. Principais Insights da Análise
+
+### 12.1 A satisfação está mais ligada à experiência do que ao preço
 
 A análise mostra que fatores financeiros, como valor do pedido, desconto e frete, apresentaram baixa relação com o NPS.
 
 Isso indica que a satisfação do cliente depende mais da qualidade da entrega, do atendimento e da resolução de problemas do que de promoções ou preços menores.
 
----
-
-### 11.2 Atrasos na entrega reduzem a satisfação
+### 12.2 Atrasos na entrega reduzem a satisfação
 
 O atraso na entrega foi um dos fatores mais relevantes na queda do NPS.
 
 Clientes que enfrentam atraso tendem a avaliar pior a experiência, o que pode reduzir a chance de recomendação e recompra.
 
----
-
-### 11.3 Reclamações são forte sinal de risco
+### 12.3 Reclamações são forte sinal de risco
 
 O aumento de reclamações está diretamente ligado à pior percepção do cliente.
 
 Clientes que registram mais reclamações tendem a ter menor NPS, menor satisfação e maior risco de não voltar a comprar.
 
----
-
-### 11.4 Muitos contatos com atendimento indicam falha na jornada
+### 12.4 Muitos contatos com atendimento indicam falha na jornada
 
 A quantidade de contatos com o atendimento apresentou forte relação com o número de reclamações.
 
@@ -260,9 +317,7 @@ Isso sugere que, quando o cliente precisa procurar a empresa muitas vezes, a exp
 
 O ideal é reduzir a necessidade de múltiplos contatos e aumentar a resolução no primeiro atendimento.
 
----
-
-### 11.5 Clientes satisfeitos tendem a comprar novamente
+### 12.5 Clientes satisfeitos tendem a comprar novamente
 
 A análise mostrou relação positiva entre NPS, satisfação interna e recompra em até 30 dias.
 
@@ -270,7 +325,7 @@ Isso reforça que melhorar a experiência do cliente não é apenas uma ação d
 
 ---
 
-## 12. Fatores que mais impactam a satisfação do cliente
+## 13. Fatores que mais impactam a satisfação do cliente
 
 Com base nas análises, os fatores mais críticos para a satisfação são:
 
@@ -284,7 +339,7 @@ Com base nas análises, os fatores mais críticos para a satisfação são:
 
 ---
 
-## 13. O que mais gera clientes detratores?
+## 14. O que mais gera clientes detratores?
 
 Os clientes detratores estão mais associados a experiências com falhas na jornada.
 
@@ -300,7 +355,7 @@ Em resumo, o detrator parece surgir menos por causa de preço e mais por causa d
 
 ---
 
-## 14. Ponto de Ruptura da Experiência
+## 15. Ponto de Ruptura da Experiência
 
 Nesta análise, o ponto de ruptura não foi tratado como um único número exato, mas como um conjunto de sinais que indicam piora clara na experiência do cliente.
 
@@ -316,7 +371,7 @@ Do ponto de vista comercial, a ruptura acontece quando o cliente deixa de ter um
 
 ---
 
-## 15. Perfil de cliente com NPS mais alto ou mais baixo
+## 16. Perfil de cliente com NPS mais alto ou mais baixo
 
 A análise não indicou forte influência de características como idade, valor do pedido ou desconto sobre o NPS.
 
@@ -338,7 +393,7 @@ Já o perfil de cliente com maior tendência de NPS baixo apresenta sinais como:
 
 ---
 
-## 16. Conclusão Executiva da Análise
+## 17. Conclusão Executiva da Análise
 
 A análise consolidada demonstra que a experiência do cliente está muito mais ligada à qualidade operacional e ao atendimento do que a fatores financeiros, como preço, desconto ou valor da compra.
 
@@ -352,33 +407,33 @@ A principal recomendação é que a empresa priorize ações de melhoria em log�
 
 ---
 
-## 17. Recomendações para o Negócio
+## 18. Recomendações para o Negócio
 
-### 17.1 Reduzir atrasos na entrega
+### 18.1 Reduzir atrasos na entrega
 
 - Monitorar pedidos com risco de atraso;
 - Criar alertas preventivos para a operação logística;
 - Melhorar a comunicação com o cliente antes do prazo ser descumprido.
 
-### 17.2 Diminuir reclamações
+### 18.2 Diminuir reclamações
 
 - Identificar os principais motivos de reclamação;
 - Criar planos de ação para os problemas mais recorrentes;
 - Acompanhar clientes com histórico de insatisfação.
 
-### 17.3 Melhorar o atendimento
+### 18.3 Melhorar o atendimento
 
 - Reduzir o número de contatos necessários para resolver um problema;
 - Priorizar resolução no primeiro atendimento;
 - Criar indicadores de acompanhamento por tipo de problema.
 
-### 17.4 Acelerar a resolução de problemas
+### 18.4 Acelerar a resolução de problemas
 
 - Definir prazos internos de resposta;
 - Acompanhar chamados críticos;
 - Dar prioridade a clientes com maior risco de baixa satisfação.
 
-### 17.5 Usar o NPS como indicador estratégico
+### 18.5 Usar o NPS como indicador estratégico
 
 - Acompanhar NPS por tipo de problema;
 - Cruzar NPS com recompra;
@@ -386,7 +441,7 @@ A principal recomendação é que a empresa priorize ações de melhoria em log�
 
 ---
 
-## 18. Indicadores de mercado que poderiam complementar a análise
+## 19. Indicadores de mercado que poderiam complementar a análise
 
 | Indicador | Utilidade |
 |---|---|
@@ -400,31 +455,31 @@ A principal recomendação é que a empresa priorize ações de melhoria em log�
 
 ---
 
-## 19. Limitações e Riscos da Análise
+## 20. Limitações e Riscos da Análise
 
-### 19.1 Relação não significa causa direta
+### 20.1 Relação não significa causa direta
 
 A análise mostra relações entre variáveis, mas não prova causalidade absoluta.
 
 Por exemplo, atrasos estão associados à queda no NPS, mas outros fatores também podem influenciar a nota do cliente.
 
-### 19.2 Algumas variáveis podem ocorrer após o problema
+### 20.2 Algumas variáveis podem ocorrer após o problema
 
 Variáveis como reclamações, tempo de resolução e contatos com atendimento podem surgir depois que o cliente já teve uma experiência ruim.
 
 Por isso, em um modelo preditivo futuro, será necessário avaliar quais dados estão disponíveis antes da coleta do NPS.
 
-### 19.3 O perfil do cliente apresentou pouca influência
+### 20.3 O perfil do cliente apresentou pouca influência
 
 Idade, tempo de relacionamento e valor do pedido não mostraram impacto forte na satisfação. Isso não significa que sejam irrelevantes, mas sim que, nesta base, os fatores operacionais foram mais explicativos.
 
-### 19.4 A análise depende da qualidade da base
+### 20.4 A análise depende da qualidade da base
 
 Resultados podem ser afetados por dados ausentes, registros incorretos, baixa granularidade ou ausência de variáveis importantes, como motivo da reclamação, transportadora, categoria do produto ou canal de atendimento.
 
 ---
 
-## 20. Proposta de Evolução com Inteligência Artificial
+## 21. Proposta de Evolução com Inteligência Artificial
 
 Como evolução futura, a empresa poderia construir um modelo preditivo para estimar o risco de baixa satisfação antes da aplicação da pesquisa de NPS.
 
@@ -475,56 +530,7 @@ O modelo poderia apoiar a empresa a:
 
 ---
 
-## 21. Tecnologias Utilizadas
-
-- Python;
-- Pandas;
-- NumPy;
-- Matplotlib;
-- Seaborn;
-- Jupyter Notebook;
-- Google Colab ou ambiente local com Jupyter.
-
----
-
-## 22. Como Reproduzir o Projeto
-
-### 22.1 Clonar o repositório
-
-```bash
-git clone https://github.com/acorrea79/IASTTechChallenge
-```
-
-### 22.2 Acessar a pasta do projeto
-
-```bash
-cd IASTTechChallenge
-```
-
-### 22.3 Instalar as dependências
-
-Caso utilize ambiente local, instale as principais bibliotecas:
-
-```bash
-pip install pandas numpy matplotlib seaborn jupyter
-```
-
-### 22.4 Executar os notebooks
-
-Execute os notebooks nesta ordem:
-
-```text
-1. notebooks/TratamentoDados.ipynb
-2. notebooks/EDA.ipynb
-```
-
-O primeiro notebook realiza o tratamento da base e gera o arquivo tratado.
-
-O segundo notebook realiza a análise exploratória e apresenta os principais gráficos e conclusões do projeto.
-
----
-
-## 23. Entregáveis do Projeto
+## 22. Entregáveis do Projeto
 
 Este repositório contém:
 
@@ -538,7 +544,7 @@ Este repositório contém:
 
 ---
 
-## 24. Resumo Final
+## 23. Resumo Final
 
 A análise mostrou que a satisfação do cliente no e-commerce é mais impactada pela experiência operacional do que por preço ou desconto.
 
